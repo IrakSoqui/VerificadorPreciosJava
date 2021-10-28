@@ -26,6 +26,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private Dimension size;
     private String codigo = "";
     private int width, height;
+    
     public NewJFrame() {
        
         initComponents();
@@ -39,15 +40,15 @@ public class NewJFrame extends javax.swing.JFrame {
                 
         this.setLayout(null);
         
-        jLabel1.setLocation(this.getWidth()/2 - jLabel1.getWidth()/2, 0);
+        //jLabel1.setLocation(this.getWidth()/2 - jLabel1.getWidth()/2, 0);
         
-        jLabel2.setLocation(this.getWidth()/2 - jLabel2.getWidth()/2, jLabel1.getLocation().y+jLabel1.getHeight());
+        //jLabel2.setLocation(this.getWidth()/2 - jLabel2.getWidth()/2, jLabel1.getLocation().y+jLabel1.getHeight());
         
         // preferredSize= 305, 165  
         
         jLabel3.setText("<html><img src='file:C:\\Users\\Soqui\\Documents\\2021-2\\Ing Soft 3\\VerificadorDePrecios-master\\VerificadorDePrecios\\src\\main\\java\\oxxo.png' width='305' height='165'>");
         
-        jLabel3.setLocation(this.getWidth()/2-jLabel3.getWidth()/2, jLabel2.getLocation().y+jLabel2.getHeight() + 10);
+        jLabel3.setLocation(this.getWidth()/2-jLabel3.getWidth()/2, 10);
 
         // preferredSize= 120, 120  
         
@@ -57,7 +58,8 @@ public class NewJFrame extends javax.swing.JFrame {
      
         //jLabel4.setLocation(this.getWidth()/2 - jLabel4.getWidth()/2 , jLabel3.getLocation().y + jLabel3.getHeight() + 10);
         
-        jLabel5.setText("");
+        jLabel5.setSize(width-200,150);
+        jLabel5.setText("Pase el producto por el escaner por favor");
     }
 
     /**
@@ -69,12 +71,10 @@ public class NewJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -85,22 +85,17 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
-        jLabel1.setText("Linea de texto 1");
-
-        jLabel2.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
-        jLabel2.setText("Linea de texto 2");
-
         jLabel3.setText("jLabel3");
         jLabel3.setPreferredSize(new java.awt.Dimension(305, 165));
 
         jLabel4.setText("jLabel4");
+        jLabel4.setMaximumSize(new java.awt.Dimension(1000, 1000));
         jLabel4.setPreferredSize(new java.awt.Dimension(120, 120));
 
         jLabel5.setFont(new java.awt.Font("Lucida Console", 1, 36)); // NOI18N
         jLabel5.setText("jLabel5");
 
-        jLabel6.setText("jLabel6");
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,47 +105,33 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2))))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(205, 205, 205)
-                                .addComponent(jLabel6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(254, 254, 254)))))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(jLabel6)))
-                        .addContainerGap(94, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(49, 49, 49))))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
@@ -170,7 +151,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/productos","root","");
                 Statement stmt = con.createStatement();
-                ResultSet rs=stmt.executeQuery("SELECT producto_nombre, producto_precio, producto_stock FROM productos WHERE producto_codigo = "+codigo);
+                ResultSet rs=stmt.executeQuery("SELECT producto_nombre, producto_precio, producto_stock, producto_imagen FROM productos WHERE producto_codigo = "+codigo);
                 
                 //Aquí los índices empiezan en 1
                 
@@ -178,7 +159,17 @@ public class NewJFrame extends javax.swing.JFrame {
                     //rs.next();
                     //JOptionPane.showMessageDialog(null, rs.getString(1));
                     
-                    jLabel5.setSize(width-200,150);
+                    jLabel5.setSize(width-200,150);         //width = ancho     height = alto
+                    
+                    //jLabel4.setSize(300,300);
+                    //jLabel4.setText("<html><img src='"+ rs.getString(4) +"' width='300' height='300'>");
+                    
+                    
+                    jLabel4.setText("<html><img src='"+ rs.getString(4) +"' width='800' height='800'>");
+        
+                    jLabel4.setLocation(25,25);
+                    
+                    
                     //jLabel5.setPreferredSize(new Dimension(width, 24));
                     jLabel5.setText("<html>Nombre: "+rs.getString(1)+"<br>Precio: "+rs.getString(2)+"<br>Cantidad en almacén: "+rs.getString(3));
                     
@@ -236,10 +227,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
